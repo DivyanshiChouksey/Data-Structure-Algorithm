@@ -1,0 +1,60 @@
+# Min heap Construction
+"""
+    shiftUp  if the element is smaller than its parent ,
+    it need to be swapped with the parent
+    this make it move up
+
+    shiftDown  if the element is greater than its children ,
+    it need to be swapped with the smallest children
+    this make it move down the tree
+"""
+
+
+class MinHeap:
+    def __init__(self, array):
+        # Do not edit the line below.
+        self.heap = self.buildHeap(array)
+
+    def buildHeap(self, array):
+        firstParentIdx = (len(array)-2)//2
+        for currentIdx in reversed(range(firstParentIdx+1)):
+            self.siftDown(currentIdx, len(array)-1, array)
+        return array
+
+    def siftDown(self, currentIdx, endIdx, heap):
+        childOneIdx = currentIdx*2 + 1
+        while childOneIdx <= endIdx:
+            childTwoIdx = currentIdx*2+2 if currentIdx*2+2 <= endIdx else -1
+            if childTwoIdx != -1 and heap[childOneIdx] > heap[childTwoIdx]:
+                idxToSwap = childTwoIdx
+            else:
+                idxToSwap = childOneIdx
+            if heap[currentIdx] > heap[idxToSwap]:
+                self.swap(currentIdx, idxToSwap, heap)
+                currentIdx = idxToSwap
+                childOneIdx = currentIdx*2 + 1
+            else:
+                return
+
+    def siftUp(self, currentIdx, heap):
+        parentIdx = (currentIdx-1)//2
+        while currentIdx > 0 and heap[currentIdx] < heap[parentIdx]:
+            self.swap(currentIdx, parentIdx, heap)
+            currentIdx = parentIdx
+            parentIdx = (currentIdx-1)//2
+
+    def peek(self):
+        return self.heap[0]
+
+    def remove(self):
+        self.swap(0,len(self.heap)-1,self.heap)
+        valToRemove = self.heap.pop()
+        self.siftDown(0,len(self.heap)-1,self.heap)
+        return valToRemove
+
+    def insert(self, value):
+        self.heap.append(value)
+        self.siftUp(len(self.heap)-1,self.heap)
+
+    def swap(self, i, j, heap):
+        heap[i], heap[j] = heap[j], heap[i]
