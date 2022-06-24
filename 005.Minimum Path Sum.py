@@ -1,9 +1,9 @@
 # Minimum Path Sum 
 """
-    instead of checking path sum many times
-    we modify value by adding its previous value in it
+    instead of checking every path
+    we modify every value by adding its previous value in it
     and for diagonals value we take the minimum of its row-1 and column-1 values
-    then add  it in the current value
+    then add it in the current value
 """
 # Time Complexity = O(m*n) || Space Complexity = O(1)
 
