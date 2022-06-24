@@ -2,13 +2,13 @@
 """
     shiftUp  if the element is smaller than its parent ,
     it need to be swapped with the parent
-    this make it move up
+    this make it move up (takes O(log(n)))
 
     shiftDown  if the element is greater than its children ,
     it need to be swapped with the smallest children
-    this make it move down the tree
+    this make it move down the tree (takes O(log(n)))
 """
-
+# Time complexity = o(nlogn) || Space Complexity = O(1)
 
 class MinHeap:
     def __init__(self, array):
