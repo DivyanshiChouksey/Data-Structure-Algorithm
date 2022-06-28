@@ -1,0 +1,30 @@
+# Three Number Sum
+"""
+    use the concept of two number sum 
+    and find the target sum by adding two no. sum with every no 
+"""
+# Time Complexity = O(n^2) || Space Complexity = O(n)
+
+array = [12,3,1,2,-6,5,-8,6]
+targetSum = 0
+
+def threeNumberSum(array, targetSum):
+    array.sort()
+    ans = []
+    for i in range(len(array) - 2):
+        l = i + 1
+        r = len(array) - 1
+        while l < r:
+            currentSum = array[i] + array[l] + array[r]
+            if currentSum == targetSum:
+                ans.append([array[i] , array[l] , array[r]])
+                l += 1
+                r -= 1
+            elif currentSum < targetSum:
+                l += 1
+            else:
+                r -= 1
+    return ans
+
+
+print(threeNumberSum(array, targetSum))
