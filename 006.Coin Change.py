@@ -1,7 +1,11 @@
 # Coin Change
 """
-    in this we make a record of min coins required for every
-    small amount and then use it for bigger amount
+    We make an inf array of size(amount) then to 
+    make amount 0 we need 0 coins
+    After this we loop to coins array and then 
+    update min coins by subtrating the index
+    by coin like this dp[i] = min(dp[i],dp[i-coin]+1)
+    
 """
 # Time Complexity = O(m*n) || Space Complexity = O(n)
 
