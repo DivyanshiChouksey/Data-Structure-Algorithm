@@ -18,8 +18,8 @@ def twoSum(nums, target) :
 
 # Effective Solution
 """
-    here we are going to do is sorting
-    so we sort the array and then make 2 pointer
+    here we are going to do is sorting,
+    so we sort the array and then make left and right pointers
     So we just perform a sum and get the desired output
 """
 # Time Complexity = O(nlogn) || Space Complexity = O(1)
@@ -39,8 +39,8 @@ def twoSum2(nums, target) :
 # Best Solution
 """
     we are using hashmap ,starting with an empty hashmap
-    if we got the desired value in our hashmap then we return the index value otherwise
-    add the value in our hashmap
+    if our target = 7, nums = [2,4,1,5,6,3],
+    then loop in array store target - num = index of num if we find number in our hashmap then return both indexes 
 """
 # Time Complexity = O(n) || Space Complexity = O(n)
 def twoSum3(nums, target) :
