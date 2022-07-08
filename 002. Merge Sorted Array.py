@@ -44,7 +44,9 @@ def merge(nums1, m, nums2, n):
 
 # Optimized Solution
 """
-    Do not return anything, modify nums1 in-place instead
+    we need to change all values in our nums1 
+    so we start by taking 2 pointers from the end and
+    then compare the largest value then update it from back(reverse) in nums1
 """
 # Time Complexity = O(n+m) || Space Complexity = O(1)
 def merge2(nums1, m, nums2, n):
