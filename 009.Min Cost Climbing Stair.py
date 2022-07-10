@@ -4,7 +4,8 @@
     so we add a zero at the last because reaching top floor from top floor cost us zero,
     Start from the last step and try to reach 1st and 2nd step 
     build a hashmap which make the record of cost and we'll go with minimum cost
-
+    Say f[i] is the final cost to climb to the top from step i. 
+    Then f[i] = cost[i] + min(f[i+1], f[i+2]).
 """
 # Time Complexity = O(n) || Space Complexity = O(1)
 
