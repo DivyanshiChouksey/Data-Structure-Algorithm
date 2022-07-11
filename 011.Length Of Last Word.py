@@ -1,7 +1,10 @@
 # Length Of Last Word
 """
-    starting form last is the effective way to ans the ques
-    take two pointers if it is space just ahead else increase the length
+    starting form end is the effective way to ans the question
+    so from the end take 2 pointers and 
+    then first move i through all extra spaces in right then
+    start j from i and find next space and
+    return the difference
 """
 # Time Complexity = O(n) || Space Complexity = O(1)
 
