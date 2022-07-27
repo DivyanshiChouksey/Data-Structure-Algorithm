@@ -1,7 +1,7 @@
 # Minimum Moves to Equal Array Elements II
 """
-    sort the array, find the median of the array and then
-    calculate steps taken to make every element of array equals to the median of the array,
+    Sort the array, find the median of the array and then
+    calculate the steps taken to make every element of array equals to the median of the array,
     finally return the total steps taken.
 """
 
