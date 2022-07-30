@@ -1,8 +1,11 @@
 # Jump Game
 """
-    greedy solution :- we keep track of jumps,steps,maximum reach we can from anystep
-    so when we are out of step we add maxReach to our steps and increase jump
-    when steps < 0 in that case return False
+    Greedy solution 
+    We start from the back of array and then 
+    keep the track of maximum distance we can go from that index 
+    if (i+nums[i]) >= goal then update goal to i
+    and if our goal is zero that means we cannot go after that point so return False.
+    
 """
 # Time Complexity = O()|| Space Complexity = O()
 
