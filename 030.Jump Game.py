@@ -7,7 +7,7 @@
     and if our goal is zero that means we cannot go after that point so return False.
     
 """
-# Time Complexity = O()|| Space Complexity = O()
+# Time Complexity = O(n)|| Space Complexity = O(1)
 
 nums = [2, 3, 1, 1, 4]
 
