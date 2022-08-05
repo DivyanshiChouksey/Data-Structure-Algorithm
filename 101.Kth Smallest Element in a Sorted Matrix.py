@@ -9,7 +9,7 @@ k = 8
     after that we pop the value from our min heap then we goto its right element and below element add them to heap and update it as float("inf")
     finally return the value at our kth heap pop
 """
-# Time Complexity = O(klogk) || Space Complexity = O(n)
+# Time Complexity = O(klogk) || Space Complexity = O(k)
 
 import heapq
 
@@ -36,7 +36,7 @@ def kthSmallest1(matrix, k):
     after that we pop the value from our min heap then we goto its right element and below element add them to heap and mark it as visited
     finally return the value at our kth heap pop
 """
-# Time Complexity = O(klogk) || Space Complexity = O(k)
+# Time Complexity = O(klogk) || Space Complexity = O(n)
 matrix = [[1, 5, 9], [10, 11, 13], [12, 13, 15]]
 k = 8
 
