@@ -1,6 +1,6 @@
 # Bag of Tokens
 """
-    taking greedy approach for maximizing score
+    Taking greedy approach for maximizing score
     sort the tokens and take 2 pointer left(l) at starting of token and right(r) at the end of tokens
     if the tokens of left is less than or equal to the given power then increase score by 1 and power decrease by the tokens of left
     or if score is greater than or equal to "1" then increase the power by tokens of left minus tokens of right
