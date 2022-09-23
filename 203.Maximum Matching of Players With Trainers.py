@@ -5,7 +5,8 @@
     that means player's ability is less than or equal to the trainer's training capacity and increase match by one
     and return match.
 """
-# Time Complexity = O() || Space Complexity = O()
+# Time Complexity = O(nlogn) || Space Complexity = O(1)
+
 players = [4, 7, 9]
 trainers = [8, 2, 5, 8]
 
