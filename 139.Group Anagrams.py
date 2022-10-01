@@ -2,8 +2,9 @@
 
 """
     Here start with creating a hashmap so we can keep record of group of anagrams
-    Go through the given array words and for each word Firstly sort it and if  is aleready in hashmap then
-    append it to the key or otherwise  create that key at the end return the list
+    Go through the given array words and for each word Firstly sort it and store it in a variable
+    and if sorted word is aleready in hashmap then append the word in it otherwise create new one
+    at the end return the list of hashmaps values.
 """
 
 # Time Complexity = O(n*w*log(n))
