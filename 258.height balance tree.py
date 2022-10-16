@@ -1,4 +1,13 @@
-#
+# Height balance Binary Tree
+"""
+    Making another class to store height and isbalance boolean value for just clean implementation
+    structure :- basic condition id root is None return height -1 and isbalance true
+    and do dfs ie. go left and right of the node and isbalance ie. abs(leftSubtreeInfo.height - rightSubtreeInfo.height) <= 1
+    and note :- also check previous leftSubtreeInfo.isBalanced and rightSubtreeInfo.isBalanced 
+    and return isBalanced.
+
+"""
+# Time Complexity = O(n) || Space Complexity = O(n)
 
 
 class TreeNode:
