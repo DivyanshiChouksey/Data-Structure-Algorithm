@@ -30,7 +30,18 @@ node1.right = node3
 node2.left = node4
 node2.right = node5
 
+
 # Iterative Solution
+"""
+    In this we make a queue in which we keep record of node with its depth initially root node and 1 depth
+    then compare the depth and if true then make new node left as current node left and then make current node left to new node
+    and return but if depth is not True then take an another array to store current node's children and then make
+    tmp our queue and do the same.
+    
+"""
+# Time Complexity = O(n) || Space Complexity = O(n)
+
+
 def addOneRow(root, val, depth):
     if root and depth == 1:
         return TreeNode(val, root)
@@ -54,6 +65,14 @@ def addOneRow(root, val, depth):
 
 
 # Recursive Solution
+"""
+    Make a recurvise call of left and right nodes until we reach to given level 
+    after that store node left to tmp variable and make current node left new node with given value
+    and then make new node left tmp and do this for its right node (vice versa) and return the head
+"""
+# Time Complexity = O(n) || Space Complexity = O(n)
+
+
 def addOneRow2(root, val, depth):
     if root and depth == 1:
         return TreeNode(val, root)
@@ -77,6 +96,7 @@ def addOneRow2(root, val, depth):
     return root
 
 
+# Traverse
 def inOrder(node):
     if node:
         inOrder(node.left)
