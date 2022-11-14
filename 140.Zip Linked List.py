@@ -1,7 +1,12 @@
 # Zip Linked List
 
-
-from re import L
+"""
+    Follow some basic steps:-
+    1. Split the linkedlist into half
+    2. Reverse the second half of linkedlist
+    3. Interweave the linkedlists - connect one node of firsthalf of linkedlist with
+        one node of seconfHalf of linkedlist and so on.
+"""
 
 
 class LinkedList:
