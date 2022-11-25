@@ -1,5 +1,12 @@
 # Odd Even Linked List
 
+"""
+    Create two individual linked list of odd and even, then connect odd linkedlist to even
+    start by making head as odd's head and head's next as even's head and then grow both list by connecting
+    odd.next to odd.next.next and even.next to even.next.next and at the last for connecting odd and even make 
+    odd next even's head and return the odd's head.
+"""
+
 # Time Complexity = O(n) || Space Complexity = O(1)
 class LinkedList:
     def __init__(self, value):
