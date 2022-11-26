@@ -49,6 +49,21 @@ def singleNumber2(nums):
             return key
 
 
+# Time Complexity = O(nlogn) || Space Complexity = O(1)
+def singleNumber3(nums):
+    if len(nums) == 1:
+        return nums[0]
+    nums.sort()
+    if nums[0] != nums[1]:
+        return nums[0]
+    for i in range(1, len(nums) - 1):
+        if nums[i - 1] != nums[i] and nums[i] != nums[i + 1]:
+            return nums[i]
+
+    return nums[-1]
+
+
 print(singleNumber(nums))
 print(singleNumber1(nums))
 print(singleNumber2(nums))
+print(singleNumber3(nums))
