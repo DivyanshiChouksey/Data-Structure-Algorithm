@@ -1,5 +1,10 @@
 # Three Number Sum
 
+"""
+    Use the concept of two number sum 
+    and find the target sum by adding two number sum with every number. 
+"""
+
 # Time Complexity = O(nlogn) || Space Complexity = O(n)
 array = [12, 3, 1, 2, -6, 5, -8, 6]
 targetSum = 0
