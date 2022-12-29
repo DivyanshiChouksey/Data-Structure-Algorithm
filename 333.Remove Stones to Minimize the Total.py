@@ -8,7 +8,7 @@
     and at the end return the sum of heap . 
 """
 
-# Time Complexity = O(n) || Space Complexity = O(n)
+# Time Complexity = O(nlogn) || Space Complexity = O(n)
 
 from heapq import heappush, heapify, heappop
 
