@@ -2,7 +2,7 @@
 """
 
 """
-# Time Complexity = O() || Space Complexity = O()
+# Time Complexity = O(n^2) || Space Complexity = O(n)
 
 nums = [-1, 0, 1, 2, -1, -4]
 
