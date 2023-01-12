@@ -1,6 +1,6 @@
 # Number of Nodes in the Sub-Tree With the Same Label
 
-# Time Complexity = O(n) || Space Complexity = O(n
+# Time Complexity = O(n) || Space Complexity = O(n)
 
 
 import collections
