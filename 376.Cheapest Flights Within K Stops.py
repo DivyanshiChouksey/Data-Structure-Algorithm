@@ -1,5 +1,14 @@
 # Cheapest Flights Within K Stops
 
+"""
+    We make an array dist of size n where we keep the track of min cost of reaching node
+    from given source then we write a bfs which would stop early if we reach k steps 
+    in that bfs we update the min cot of reaching that node and then in our provide 
+    the total cost of reaching that node return dist[destination]
+"""
+
+# Time Complexity = o(n) || Space Complexity = O(n)
+
 from collections import defaultdict
 
 n = 4
