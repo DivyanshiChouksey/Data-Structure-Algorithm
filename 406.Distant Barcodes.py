@@ -8,6 +8,8 @@
            use - most_common() function to find highest frequency elements in Counter
 """
 
+# Time Complexity = O(n) || Space Complexity = O(n)
+
 from collections import Counter
 
 barcodes = [1,1,1,1,2,2,3,3]
