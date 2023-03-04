@@ -1,5 +1,24 @@
 # Preorder Inorder Postorder in Single Traversal
 
+"""
+    Initailzing 3 empty arrays preorder, inorder, postorder and a 
+    stack with root and number of time that node occures (called num) ie. stack =[[root,1]]
+    then pop the top element from stack and check:-
+
+    1. if pop node's num == 1 - then append it to preorder and increase num by 1 then
+                            append node with increase num in stack and if node.left then also 
+                            append node.left with num 1 to stack.
+
+    2. if pop node's num == 2 - then append it to inorder and increase num by 1 then
+                            append node with increase num in stack and if node.right then also 
+                            append node.right with num 1 to stack.
+
+    3. else just append the node in postorder.
+    at the end return preorder, inorder, postorder.
+
+
+"""
+
 # Time Complexity = O(n) , n =3*n
 # Space Complexity = O(n) , n = 4*n
 
