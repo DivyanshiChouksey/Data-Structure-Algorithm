@@ -42,6 +42,14 @@ def sortedListToBST(head :ListNode):
     return helper(0,len(arr)-1)
 
 
+"""
+    Approach is same as above find the mid and make it a treenode and for that node left call recursively in
+    mid's left partition and for node right call recursively mid'right partition but for optimization instead of 
+    traversing the linkedlist and storing the value we will traverse linkedlist by fast and slow method to get the 
+    middle value the make it treenode and then update middle value as None then then for node left call recursively 
+    the head and for node right call recursively the slow.next 
+    return the node.
+"""
 
 # Time Complexity = O(n) || Space Complexity = O(n)
 head = [-10,-3,0,5,9]
