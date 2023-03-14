@@ -68,3 +68,21 @@ def symmetricalTree(tree):
         stackRight.append(right.left)
 
     return True
+
+
+"""
+    Recursive Solution 
+    using same approach as above 
+"""
+
+def symmetricalTree2(root):
+    def helper(nodeleft,noderight):
+        if nodeleft is None and noderight is None:
+            return True
+        if nodeleft is None or noderight is None or nodeleft.val != noderight.val:
+            return False
+        return helper(nodeleft.left,noderight.right) and helper(nodeleft.right,noderight.left)
+
+    return helper(root.left,root.right)
+
+
