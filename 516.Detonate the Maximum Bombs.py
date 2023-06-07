@@ -1,11 +1,11 @@
 # Detonate the Maximum Bombs
 
-from collections import defaultdict
+from collections import defaultdict,deque
 
 bombs = [[1,2,3],[2,3,1],[3,4,2],[4,5,3],[5,6,4]]
 
 def maximumDetonation(bombs):
-    graph = collections.defaultdict(list)
+    graph = defaultdict(list)
     n = len(bombs)
 
     # Build the graph
@@ -22,7 +22,7 @@ def maximumDetonation(bombs):
 
     # print(graph) -> defaultdict(<class 'list'>, {0: [1, 2], 2: [1, 3], 3: [1, 2, 4], 4: [2, 3]})
     def bfs(i):
-        queue = collections.deque([i])
+        queue = deque([i])
         visited = set([i])
         while queue:
             cur = queue.popleft()
