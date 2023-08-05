@@ -48,3 +48,31 @@ def waterArea(height):
 
 
 print(waterArea(height))
+
+
+heights = [0, 8, 0, 0, 5, 0, 0, 10, 0, 0, 1, 1, 0, 3]
+
+def waterArea(heights):
+    if len(heights) == 0:
+        return 0
+
+    l = 0
+    r = len(heights)-1
+    left = heights[l]
+    right = heights[r]
+    water = 0
+
+    while l<r:
+        if heights[l] < heights[r]:
+            l+=1
+            left = max(left,heights[l])
+            water += left-heights[l]
+        else:
+            r-=1
+            right = max(right,heights[r])
+            water += right - heights[r]
+
+    return water
+    
+    
+print(waterArea(heights))
