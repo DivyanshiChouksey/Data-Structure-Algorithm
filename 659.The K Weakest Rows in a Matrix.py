@@ -1,11 +1,12 @@
 # The K Weakest Rows in a Matrix
 
-mat = 
-[[1,1,0,0,0],
+import heapq
+
+mat = [[1,1,0,0,0],
  [1,1,1,1,0],
  [1,0,0,0,0],
  [1,1,0,0,0],
- [1,1,1,1,1]], 
+ [1,1,1,1,1]]
 k = 3
 
 def kWeakestRows(mat,k):
