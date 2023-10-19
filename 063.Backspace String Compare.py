@@ -36,3 +36,40 @@ def backspace(s, t):
 
 
 print(backspace(s, t))
+
+# Optimise
+
+s="nzp#o#g"
+t="b#nzp#o#g"
+
+def backspaceCompare(s, t):
+    # acd#  ad#c
+    i = len(s)-1
+    j = len(t)-1
+    sBack = 0
+    tBack = 0
+    while True:
+        while i>=0 and (sBack or s[i]=="#"):
+            if s[i]=="#":
+                sBack+=1
+            else:
+                sBack-=1
+            i-=1
+        while j>=0 and (tBack or t[j]=="#"):
+            if t[j]=="#":
+                tBack +=1
+            else:
+                tBack-=1
+            j-=1
+            
+        # print(i,j)
+        if i>=0 and j>= 0 and s[i]==t[j]:
+            i-=1
+            j-=1
+        else:
+            return True if (i== j==-1) else False
+    return True if (i==-1 and j==-1) else False
+
+
+
+print( backspaceCompare(s, t))
