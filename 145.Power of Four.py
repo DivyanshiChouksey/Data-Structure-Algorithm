@@ -6,7 +6,7 @@ from math import log
 n = 1
 
 #
-def isPowerOfFour(n) -> bool:
+def isPowerOfFour(n):
     return n > 0 and log(n, 4).is_integer()
 
 
@@ -21,6 +21,11 @@ def isPowerOfFour2(n):
             return True
     return False
 
+# 
+def isPowerOfFour3(n):
+    binary = bin(n)
+    return n > 0 and (not (n & (n-1))) and len(binary)%2
 
 print(isPowerOfFour(n))
 print(isPowerOfFour2(n))
+print(isPowerOfFour3(n))
