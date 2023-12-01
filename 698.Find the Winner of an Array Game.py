@@ -1,5 +1,7 @@
 # Find the Winner of an Array Game
 
+from collections import deque
+
 arr = [2,1,3,5,4,6,7]
 k = 2
 
