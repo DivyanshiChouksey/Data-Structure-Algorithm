@@ -32,3 +32,32 @@ def closeStrings(word1, word2):
 
 
 print(closeStrings(word1, word2))
+
+# Solution 2
+word1 = "abc"
+word2 = "bca"
+
+def closeStrings2(word1, word2):
+    # make the code like a general string with pattern
+    if len(word1)!=len(word2):
+        return False
+    
+    freq1 = [0]*26
+    freq2 = [0]*26
+
+    for i in range(len(word1)):
+        j = ord(word1[i]) - ord("a")
+        k = ord(word2[i]) - ord("a")
+        freq1[j]+=1
+        freq2[k]+=1
+
+    for i in range(26):
+        if freq1[i]>0 and freq2[i]==0:
+            return False
+        if freq2[i]>0 and freq1[i]==0:
+            return False
+            
+    return sorted(freq1)==sorted(freq2)
+        
+
+print( closeStrings2(word1, word2))
