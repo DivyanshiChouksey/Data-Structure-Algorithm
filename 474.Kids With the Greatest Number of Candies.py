@@ -14,4 +14,4 @@ def kidsWithCandies(candies, extraCandies):
 
     return result
 
-print(kidsWithCandies(candies extraCandies))
+print(kidsWithCandies(candies,extraCandies))
